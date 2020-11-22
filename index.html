@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Copart HR Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
+    <a class="navbar-brand d-none d-sm-block active" href="index.html">
+
+      <img src="https://www.copart.com/images/logo.svg" alt="Copart" class="img-responsive copart-img">
+
+    </a><button
+      class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><svg
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg></button>
+    <form class="form-inline mr-auto d-none d-lg-block"><input class="form-control form-control-solid mr-sm-2"
+        type="search" placeholder="Search" aria-label="Search"></form>
+    <ul class="navbar-nav align-items-center ml-auto">
+      <li class="nav-item dropdown no-caret mr-3 dropdown-notifications">
+        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts"
+          href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-bell">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg></a>
+      </li>
+
+      <li class="nav-item dropdown no-caret mr-3 dropdown-notifications">
+        <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages"
+          href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-mail">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg></a>
+      </li>
+
+
+      <!-- <li class="nav-item dropdown no-caret mr-3 dropdown-user">
+        <a class="btn btn-icon btn-transparent-dark dropdown-toggle"><img class="img-fluid"
+            src="https://source.unsplash.com/QAB-WJcbgJk/60x60"></a>
+      </li> -->
+    </ul>
+  </nav>
+
+
+  <!--Layout side menu-->
+  <div id="layout">
+    <div class="layout_left right_shadow">
+      <div class="side_nav">
+        <div class="sidenav_menu">
+          <div class="side_menu_heading"> Entry</div>
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            Create Position
+          </a>
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </div>
+            Review/Edit
+          </a>
+          <div class="side_menu_heading"> View </div>
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-list" aria-hidden="true"></i>
+            </div>
+            Postions
+          </a>
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            User Details
+          </a>
+          <div class="side_menu_heading"> Admin Review</div>
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            </div>
+            Reports
+          </a>
+
+          <a class="nav_link">
+            <div class="nav_link_icon">
+              <i class="fa fa-cogs" aria-hidden="true"></i>
+            </div>
+            Settings
+          </a>
+        </div>
+      </div>
+
+
+      <div class="sidenav_footer">
+        <div class="sidenav_footer_content">
+          <div class="sidenav_footer_subtitle">Logged in as:</div>
+          <div class="sidenav_footer_title">Rohit Rao</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="layout_right">
+      <main>
+        <!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+
+          <div class="container-fluid">
+            <div class="page_header_content">
+              <h1 class="page_header_title">
+
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Add New</h1>
+              <div class="page_header_subtitle">Example add the user personal details here</div>
+            </div>
+          </div>
+
+        </div> -->
+
+        <div class="container-fluid ">
+          <div class="content_boxs">
+            <div class="mb-4 top_link">
+              <!-- <button type="button" class="btn btn-primary btn-sm custom-action-btn">LOAD DETAIL</button> -->
+              <button type="button" class="btn btn-primary btn-sm custom-action-btn" data-toggle="modal" data-target=".bs-example-modal-lg">Create Position</button>
+              <button type="button" class="btn btn-primary btn-sm custom-action-btn" data-toggle="modal" data-target=".bs-example-modal-lg">See list of submissions for a position
+              </button>
+            </div>
+
+            <div class="card mb-4 table_shadow">
+              <div class="card-header">List of positions</div>
+              <div class="card-body">
+                <div class="datatable">
+                  <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length"><label>Show <select
+                              class="custom-select custom-select-sm form-control form-control-sm">
+                              <option value="10">10</option>
+                              <option value="25">25</option>
+                              <option value="50">50</option>
+                              <option value="100">100</option>
+                            </select> entries</label></div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div id="dataTable_filter" class="dataTables_filter"><label><input type="search"
+                              class="form-control form-control-sm" placeholder="Search" aria-controls="dataTable"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <table class="table table-bordered table-hover dataTable" id="dataTable" width="100%"
+                          cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                          <thead>
+                            <tr role="row">
+                              <th style="width: 20px;">ID</th>
+                              <th class="sorting" style="width: 50px;">Designation</th>
+                              <th class="sorting" style="width: 150px;">Email Address</th>
+                              <th class="sorting" style="width: 34px;">Contact Number</th>
+                              <th class="sorting" style="width: 76px;">Department</th>
+                              <th class="sorting" style="width: 49px;">Skills</th>
+                              <th class="sorting" style="width: 60px;">Postion Last Date</th>
+                              <th class="sorting" style="width: 60px;">Job Description</th>
+                              <th class="sorting" style="width: 60px;">Update Status</th>
+                              <th class="sorting" style="width: 60px;">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr role="row" class="odd">
+                              <td class="sorting_1">
+                                <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" id="customCheck1" type="checkbox">
+                                  <label class="custom-control-label" for="customCheck1"></label>
+                                </div>
+                              </td>
+                              <td>Java Developer</td>
+                              <td>rohitrao@copart.com</td>
+                              <td>9160208121</td>
+                              <td>PDMAS</td>
+                              <td>Java,SQL,Angular</td>
+                              <td>03/31/2020</td>
+                              <td>Java is an influential computing language that has many linguistic.. </td>
+                              <td>Edit/Delete</td>
+                              <td><div class="badge badge-warning badge-pill">New</div></td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td class="sorting_2">
+                                <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" id="customCheck2" type="checkbox">
+                                  <label class="custom-control-label" for="customCheck2"></label>
+                                </div>
+                              </td>
+              
+                              <td>Android Developer</td>
+                              <td>ram13245@copart.com</td>
+                              <td>9166546213</td>
+                              <td>Backoffice</td>
+                              <td>Ruby,Java</td>
+                              <td>12/31/2020</td>
+                              <td>Java is an influential computing language that has many linguistic.. </td>
+                              <td>Edit/Delete</td>
+
+                              <td>
+                                <div class="badge badge-primary badge-pill">Latest</div>
+                              </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td class="sorting_1">
+                                <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" id="customCheck3" type="checkbox">
+                                  <label class="custom-control-label" for="customCheck3"></label>
+                                </div>
+                              </td>
+                              <td>Java Developer</td>
+                              <td>rohitrao@copart.com</td>
+                              <td>9160208121</td>
+                              <td>PDMAS</td>
+                              <td>Java,SQL,Angular</td>
+                              <td>03/31/2020</td>
+                              <td>Java is an influential computing language that has many linguistic.. </td>
+                              <td>Edit/Delete</td>
+
+                              <td>
+                                <div class="badge badge-warning badge-pill">New</div>
+                              </td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td class="sorting_2">
+                                <div class="custom-control custom-checkbox">
+                                  <input class="custom-control-input" id="customCheck4" type="checkbox">
+                                  <label class="custom-control-label" for="customCheck4"></label>
+                                </div>
+                              </td>
+                              <td>Java Developer</td>
+                              <td>rohitrao@copart.com</td>
+                              <td>9160208121</td>
+                              <td>PDMAS</td>
+                              <td>Java,SQL,Angular</td>
+                              <td>03/31/2020</td>
+                              <td>Java is an influential computing language that has many linguistic.. </td>
+                              <td>Edit/Delete</td>
+
+
+                              <td>
+                                <div class="badge badge-secondary badge-pill">Expired</div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to
+                          10 of 57 entries</div>
+                      </div>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                          <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="dataTable_previous"><a href="#"
+                                aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                            </li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable"
+                                data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="2"
+                                tabindex="0" class="page-link">2</a></li>
+                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="3"
+                                tabindex="0" class="page-link">3</a></li>
+                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="4"
+                                tabindex="0" class="page-link">4</a></li>
+                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="5"
+                                tabindex="0" class="page-link">5</a></li>
+                            <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="6"
+                                tabindex="0" class="page-link">6</a></li>
+                            <li class="paginate_button page-item next" id="dataTable_next"><a href="#"
+                                aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
+
+
+<div class="modal  fade bs-example-modal-lg" tabindex="-1" role="dialog"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Postion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="custom-form" action="" method="post">
+            <fieldset>
+              <input placeholder="Designation" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Contact Person Number (optional)" type="tel" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Department" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Skills" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Postion Last Date" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+              <textarea placeholder="Job Description" tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+              <button name="submit" type="submit" id="custom-form-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+          </form>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
