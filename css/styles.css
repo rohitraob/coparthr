@@ -44,7 +44,7 @@ body {
 
 #layout .layout_left .side_nav {
   color: #1f2d41;
-  padding-top: 7rem;
+  padding-top: 6.5rem;
 }
 
 #layout .layout_left .side_nav .side_menu_heading {
@@ -155,7 +155,7 @@ body {
 }
 
 .content_boxs {
-  margin-top: 7%;
+  margin-top: 6.5%;
 }
 
 .table_shadow {
@@ -203,6 +203,10 @@ h5.card-title {
 #dataTable_wrapper #dataTable_paginate {
   text-align: right;
   float: right;
+}
+
+#dataTable_wrapper .table td, #dataTable_wrapper .table th {
+  padding: .6rem;
 }
 
 .form_details .form-group {
@@ -271,7 +275,7 @@ span.error:before {
 }
 
 .copart-img {
-  height: 45px;
+  height: 40px;
 }
 
 #custom-form {
@@ -379,5 +383,32 @@ span.error:before {
 
 .top_link {
   text-align: right;
+}
+
+.login {
+  background-color: #0d5db8;
+  font-size: 1rem;
+  height: 100vh;
+}
+
+.login .login-heading {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 15px 0px 8px;
+  color: #323f52;
+}
+
+.login .login-logo {
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.login .loginButton {
+  background-color: #0d5db8;
+  border-color: #0d5db8;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=styles.css.map */
